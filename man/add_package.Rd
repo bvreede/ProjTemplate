@@ -2,10 +2,18 @@
 % Please edit documentation in R/add_package.R
 \name{add_package}
 \alias{add_package}
-\title{Add a package to the packages.R file}
+\title{Add packages to a project}
 \usage{
 add_package(pkgs, homedir = ".")
 }
+\arguments{
+\item{pkgs}{A character or array of characters that denote the names of packages to include}
+
+\item{homedir}{Top level directory of the project, defaults to the current directory}
+}
 \description{
-Add a package to the packages.R file
+Add packages to a project
+}
+\examples{
+add_packages(c('tidyverse','broom','stringr'))
 }

@@ -1,9 +1,8 @@
-#' Title
+#' Writing required packages to pkgs.yml
 #'
 #' @param pkgs A character array of packages to initialize the project with
 #' @param homedir The top-level directory of the project, defaults to the current directory
 #'
-#' @return
 #'
 #' @examples
 write_packages <- function(pkgs = NULL, homedir = '.'){
