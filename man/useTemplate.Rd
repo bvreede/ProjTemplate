@@ -2,7 +2,7 @@
 % Please edit documentation in R/useTemplate.R
 \name{useTemplate}
 \alias{useTemplate}
-\title{useTemplate}
+\title{Create a directory structure for a RStudio project}
 \usage{
 useTemplate(homedir = ".")
 }
@@ -10,5 +10,6 @@ useTemplate(homedir = ".")
 \item{homedir}{What directory are you creating the template in}
 }
 \description{
-This function actually creates the folders and files that go into the template
+This function actually creates the folders and files that go into the template.
+It will not overwrite existing
 }

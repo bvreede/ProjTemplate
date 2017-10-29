@@ -1,6 +1,7 @@
-#' useTemplate
+#' Create a directory structure for a RStudio project
 #'
-#' This function actually creates the folders and files that go into the template
+#' This function actually creates the folders and files that go into the template.
+#' It will not overwrite existing
 #'
 #' @param homedir What directory are you creating the template in
 #'
