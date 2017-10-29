@@ -7,9 +7,8 @@
 #'
 #' @examples
 write_packages <- function(pkgs = NULL, homedir = '.'){
-  require(yaml)
   if(!is.null(pkgs)){
-    pkg_yml <- as.yaml(pkgs)
+    pkg_yml <- yaml::as.yaml(pkgs)
     write(pkg_yml, file = file.path(homedir, 'lib','pkgs.yml'))
   }
 }

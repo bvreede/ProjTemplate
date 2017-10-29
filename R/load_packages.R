@@ -14,7 +14,7 @@ load_packages <- function() {
   pkgs <- yaml::yaml.load_file(file.path('lib','pkgs.yml'))
   for(p in pkgs){
     if(!(p %in% installed.packages()[,1])){
-      install.packages(p, repos='http://cran.rstudio.com')
+      utils::install.packages(p, repos='http://cran.rstudio.com')
     }
     suppressPackageStartupMessages(library(p, character.only = TRUE))
   }
