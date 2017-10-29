@@ -3,6 +3,7 @@ Title: Creates folder structure for a RStudio project, and adds utilities for lo
 Version: 0.0.1
 Authors@R: person("Abhijit", "Dasgupta", email = "adasgupta@araastat.com", role = c("aut", "cre"))
 Description: This package creates a particular file structure in a RStudio project and adds utility functions for adding R packages to the project as well as loading R functions stored in `lib/R` using a "poor man's package" system
+Maintainer: Abhijit Dasgupta <adasgupta@araastat.com>
 Depends: R (>= 3.3.0)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
