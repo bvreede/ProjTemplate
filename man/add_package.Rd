@@ -4,8 +4,11 @@
 \alias{add_package}
 \title{Add a package to the packages.R file}
 \usage{
-add_package(pkgs, homedir = ".", version = FALSE)
+add_package(pkgs, homedir = ".")
 }
 \description{
 Add a package to the packages.R file
+}
+\examples{
+add_packages(c('tidyverse','broom','stringr'))
 }
