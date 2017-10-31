@@ -7,12 +7,18 @@
 #'
 #' @examples
 #' add_packages(c('tidyverse','broom','stringr'))
-add_package <- function(pkgs, homedir = '.'){
+add_package <- function(pkgs, homedir = '.', version=FALSE){
   if(file.exists(file.path(homedir,'lib','pkgs.yml'))){
     existing_pkgs <- yaml::yaml.load_file(file.path(homedir,'lib','pkgs.yml'))
     pkgs <- unique(c(pkgs, existing_pkgs))
+    if(version){
+      pkgs = add_version(pkgs)
+    }
     write_packages(pkgs, homedir)
   } else {
+    if(version){
+      pkgs <- add_version(pkgs)
+    }
     write_packages(c('ProjTemplate',pkgs), homedir)
   }
   load_packages()
