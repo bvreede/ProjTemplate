@@ -5,6 +5,7 @@
 #'
 #' @param homedir What directory are you creating the template in
 #'
+#' @return
 #' @export
 #'
 useTemplate <- function(homedir = '.') {

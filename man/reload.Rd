@@ -7,7 +7,7 @@
 reload(d = file.path(getwd(), "lib"))
 }
 \arguments{
-\item{d}{The directory where the utility functions reside. Defaults to the "lib/R"
+\item{d}{The directory where the utility functions reside. Defaults to the "lib"
 sub-directory of the current directory}
 }
 \value{
@@ -15,9 +15,10 @@ Invisibly attaches an environment to the current workspace, named "fn"
 }
 \description{
 This function creates a new environment in R, sources all the R script files
-in the `lib/R` directory into that environment, and attaches that environment to the
+in a directory into that environment, and attaches that environment to the
 current namespace. This is a "poor man" packaging system before a formal package is written
 }
 \details{
-This function can be called repeatedly when new utility functions are stored in `lib/R` or
+This function is meant to load utility functions into R without cluttering the
+namespace. It is a "poor man's" packaging withouth formal packaging
 }

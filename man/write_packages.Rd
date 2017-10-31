@@ -2,7 +2,7 @@
 % Please edit documentation in R/write_packages.R
 \name{write_packages}
 \alias{write_packages}
-\title{Writing required packages to pkgs.yml}
+\title{Title}
 \usage{
 write_packages(pkgs = NULL, homedir = ".")
 }
@@ -11,6 +11,9 @@ write_packages(pkgs = NULL, homedir = ".")
 
 \item{homedir}{The top-level directory of the project, defaults to the current directory}
 }
+\value{
+
+}
 \description{
-Writing required packages to pkgs.yml
+Title
 }

@@ -1,13 +1,11 @@
-#' Add packages to a project
+#' Add a package to the packages.R file
 #'
-#' @param pkgs A character or array of characters that denote the names of packages to include
-#' @param homedir Top level directory of the project, defaults to the current directory
-#'
+#' @return
 #' @export
 #'
 #' @examples
 #' add_packages(c('tidyverse','broom','stringr'))
-add_package <- function(pkgs, homedir = '.', version=FALSE){
+add_package <- function(pkgs, homedir = '.'){
   if(file.exists(file.path(homedir,'lib','pkgs.yml'))){
     existing_pkgs <- yaml::yaml.load_file(file.path(homedir,'lib','pkgs.yml'))
     pkgs <- unique(c(pkgs, existing_pkgs))
@@ -16,10 +14,7 @@ add_package <- function(pkgs, homedir = '.', version=FALSE){
     }
     write_packages(pkgs, homedir)
   } else {
-    if(version){
-      pkgs <- add_versions(pkgs)
-    }
-    write_packages(c('ProjTemplate',pkgs), homedir)
+    write_packages(pkgs, homedir)
   }
   load_packages()
 }
