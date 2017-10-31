@@ -4,7 +4,7 @@
 \alias{add_package}
 \title{Add packages to a project}
 \usage{
-add_package(pkgs, homedir = ".")
+add_package(pkgs, homedir = ".", version = FALSE)
 }
 \arguments{
 \item{pkgs}{A character or array of characters that denote the names of packages to include}

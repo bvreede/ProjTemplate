@@ -12,12 +12,12 @@ add_package <- function(pkgs, homedir = '.', version=FALSE){
     existing_pkgs <- yaml::yaml.load_file(file.path(homedir,'lib','pkgs.yml'))
     pkgs <- unique(c(pkgs, existing_pkgs))
     if(version){
-      pkgs = add_version(pkgs)
+      pkgs = add_versions(pkgs)
     }
     write_packages(pkgs, homedir)
   } else {
     if(version){
-      pkgs <- add_version(pkgs)
+      pkgs <- add_versions(pkgs)
     }
     write_packages(c('ProjTemplate',pkgs), homedir)
   }
