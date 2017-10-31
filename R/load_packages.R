@@ -13,7 +13,7 @@ load_packages <- function() {
   }
   pkgs <- yaml::yaml.load_file(file.path('lib','pkgs.yml'))
   if(all(stringr::str_detect(pkgs, '=>'))){# Version information included
-    out = dplyr::bind_rows(stringr::str_split(pkgs,'=>'))
+    out = do.call(rbind,stringr::str_split(pkgs,'=>'))
     pkgs <- out[,1]
     versions <- str[,2]
   } else {versions <- NULL}
