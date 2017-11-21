@@ -15,7 +15,7 @@ reload <- function(d = file.path(getwd(),'lib')){
   if ('fn' %in% search()) detach('fn')
   fn <- new.env()
   for (f in dir(file.path(d,'R'), pattern = '[.R]')) {
-    print(paste('Loading',f))
+    message(paste('Loading',f))
     source(file.path(d,'R',f), local = fn)
   }
   attach(fn)
