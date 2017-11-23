@@ -12,9 +12,11 @@ write_packages <- function(pkgs = NULL, homedir = '.'){
     if (file.exists(file.path(homedir, 'lib','pkgs.yml'))){
     write(pkg_yml, file = file.path(homedir, 'lib','pkgs.yml'))
     } else {
-      dir.create(file.path(homedir,'lib'))
+      if(!dir.exists(file.path(homedir,'lib'))){
+        dir.create(file.path(homedir,'lib'))
+      }
       file.create(file.path(homedir,'lib','pkgs.yml'), recursive=T)
-      cat(pkg_yml, file = file.path(homedir, 'lib','pkgs.yml'))
+      write(pkg_yml, file = file.path(homedir, 'lib','pkgs.yml'))
     }
   }
 }
