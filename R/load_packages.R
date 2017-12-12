@@ -22,7 +22,7 @@ load_packages <- function(homedir = '.') {
     versions <- out[,2]
   } else {versions <- NULL}
   for(p in pkgs){
-    if (str_detect(p, '/')){ # GitHub packages
+    if (stringr::str_detect(p, '/')){ # GitHub packages
       pkgname = stringr::str_split(p, '/')[[1]][[2]]
       if (pkgname %notin% installed.packages()[,1]){
         devtools::install_github(p)
