@@ -10,3 +10,7 @@ load_packages()
 This function reads a file "pkgs.yml" in the `lib` directory of the project
 and loads them in R, installing them if necessary
 }
+\details{
+Non-CRAN packages can be accessed via GitHub by specifying `user/package` format
+Particular versions of packages can be ensured by specifying `package => version` format
+}
