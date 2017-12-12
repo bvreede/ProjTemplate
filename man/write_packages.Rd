@@ -2,7 +2,7 @@
 % Please edit documentation in R/write_packages.R
 \name{write_packages}
 \alias{write_packages}
-\title{Title}
+\title{iitle}
 \usage{
 write_packages(pkgs = NULL, homedir = ".")
 }
@@ -15,5 +15,5 @@ write_packages(pkgs = NULL, homedir = ".")
 
 }
 \description{
-Title
+iitle
 }

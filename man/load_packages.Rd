@@ -4,7 +4,7 @@
 \alias{load_packages}
 \title{Loading project-required packages in R}
 \usage{
-load_packages()
+load_packages(homedir = ".")
 }
 \description{
 This function reads a file "pkgs.yml" in the `lib` directory of the project
