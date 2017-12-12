@@ -27,7 +27,7 @@ load_packages <- function(homedir = '.') {
       if (pkgname %notin% installed.packages()[,1]){
         devtools::install_github(p)
       }
-      suppressPackageStartupMessages(library(p, character.only = TRUE))
+      suppressPackageStartupMessages(library(pkgname, character.only = TRUE))
     } else { # CRAN packages
       if(!(p %in% installed.packages()[,1])){
         if(!is.null(versions)){
