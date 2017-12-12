@@ -10,9 +10,9 @@
 #' @export
 #'
 #' @examples
-load_packages <- function() {
+load_packages <- function(homedir = '.') {
   if(!file.exists(file.path('lib','pkgs.yml'))){
-    stop('No packages to load; use `add_package` to add packages')
+    add_package('ProjTemplate')
   }
   pkgs <- yaml::yaml.load_file(file.path('lib','pkgs.yml'))
   if(any(stringr::str_detect(pkgs, '=>'))){# Version information included
@@ -31,8 +31,7 @@ load_packages <- function() {
         utils::install.packages(p, repos='http://cran.rstudio.com')
         }
       }
-      suppressPackageStartupMessages(library(p, character.only = TRUE))
     }
+    suppressPackageStartupMessages(library(p, character.only = TRUE))
   }
 }
-
