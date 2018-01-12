@@ -22,7 +22,14 @@ load_packages <- function(homedir = '.') {
     versions <- out[,2]
   } else {versions <- NULL}
   for(p in pkgs){
-    if (stringr::str_detect(p, '/')){ # GitHub packages
+    if (stringr::str_detect(p, 'bioC')){ # Bioconductor packages
+      pkgname <- stringr::str_extract(p, '^[a-zA-Z0-9]+')
+      if (pkgname %notin% installed.packages()[,1]){
+        source('http://bioconductor.org/biocLite.R')
+        biocLite(pkgname)
+        suppressPackageStartupMessages(library(pkgname, character.only = TRUE))
+      }
+    } else if (stringr::str_detect(p, '/')){ # GitHub packages
       pkgname = stringr::str_split(p, '/')[[1]][[2]]
       if (pkgname %notin% installed.packages()[,1]){
         devtools::install_github(p)

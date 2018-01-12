@@ -4,7 +4,7 @@
 \alias{add_package}
 \title{Add a package to the packages.R file}
 \usage{
-add_package(pkgs, homedir = ".")
+add_package(pkgs, homedir = ".", bioC = FALSE)
 }
 \description{
 Add a package to the packages.R file
