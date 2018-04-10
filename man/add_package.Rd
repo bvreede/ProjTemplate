@@ -6,8 +6,16 @@
 \usage{
 add_package(pkgs, homedir = ".", bioC = FALSE)
 }
+\arguments{
+\item{pkgs}{A character vector of packages}
+
+\item{homedir}{Where are these being included}
+
+\item{bioC}{Whether packages are from Bioconductor}
+}
 \description{
-Add a package to the packages.R file
+Packages can be in Github format ('user/packagename') as well
+as pure 'packagename'. If bioC=TRUE, all the packages must be from Bioconductor
 }
 \examples{
 add_packages(c('tidyverse','broom','stringr'))
