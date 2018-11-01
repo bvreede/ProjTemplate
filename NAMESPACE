@@ -2,6 +2,7 @@
 
 export(add_blank_rows)
 export(add_package)
+export(clean_cols)
 export(expand_code)
 export(find_dropbox)
 export(icd9_codes)

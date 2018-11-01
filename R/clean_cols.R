@@ -1,3 +1,13 @@
+#' Clean columns to make better tables
+#'
+#' @param x A data.frame object
+#' @param ... Columns to clean
+#' @param arrange Whether data should be sorted by column values
+#'
+#' @return
+#' @export
+#'
+#' @examples
 clean_cols <- function(x, ..., arrange = F){
   colv = quos(...)
   x <- x %>%
