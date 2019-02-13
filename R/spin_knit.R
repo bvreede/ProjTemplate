@@ -13,6 +13,6 @@ spin_knit <- function(f){
   require(knitr)
   require(rmarkdown)
   require(stringr)
-  spin(f, knit=F, format='Rmd')
+  spin(f, knit = F, format = 'Rmd')
   render(str_replace(f,'.R','.Rmd'))
 }
