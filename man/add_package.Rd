@@ -18,5 +18,5 @@ Packages can be in Github format ('user/packagename') as well
 as pure 'packagename'. If bioC=TRUE, all the packages must be from Bioconductor
 }
 \examples{
-add_packages(c('tidyverse','broom','stringr'))
+add_package(c('tidyverse','broom','stringr'))
 }

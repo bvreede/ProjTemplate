@@ -2,13 +2,14 @@ Package: ProjTemplate
 Title: Creates folder structure for a RStudio project, and adds utilities for loading packages and functions
 Version: 0.0.3
 Authors@R: person("Abhijit", "Dasgupta", email = "adasgupta@araastat.com", role = c("aut", "cre"))
-Description: This package comprises personal functions for different purposes based on a particular project file structure, as well as functions for output formatting 
+Description: This package comprises personal functions for different purposes 
+  based on a particular project file structure, as well as functions for output formatting 
 Maintainer: Abhijit Dasgupta <adasgupta@araastat.com>
 Depends: R (>= 3.4.0)
 License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Imports: yaml
 URL: https://github.com/webbedfeet/ProjTemplate
 BugReports: https://github.com/webbedfeet/ProjTemplate/issues
+Imports: dplyr, tidyr, magrittr, stringr, survival, glue, yaml

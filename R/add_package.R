@@ -11,7 +11,7 @@
 #' @export
 #'
 #' @examples
-#' add_packages(c('tidyverse','broom','stringr'))
+#' add_package(c('tidyverse','broom','stringr'))
 add_package <- function(pkgs, homedir = '.', bioC = FALSE){
   if (bioC){
     pkgs <- paste(pkgs,'bioC',sep='-')
